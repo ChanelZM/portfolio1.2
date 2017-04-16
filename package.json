@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-1.2",
+  "version": "1.0.0",
+  "description": "Portfolio of Chanel Mepschen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanelZM/portfolio1.2.git"
+  },
+  "author": "Chanel Mepschen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChanelZM/portfolio1.2/issues"
+  },
+  "homepage": "https://github.com/ChanelZM/portfolio1.2#readme",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  }
+}
