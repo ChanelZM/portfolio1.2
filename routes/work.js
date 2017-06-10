@@ -22,4 +22,8 @@ router.get('/xdconference', function(req, res){
     res.render('content/xdconference');
 });
 
+router.get('/hatepage', function(req, res){
+    res.send('Coming soon!');
+});
+
 module.exports = router;

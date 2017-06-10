@@ -9,9 +9,17 @@
     </head>
     <body>
         <%- include('../partials/header.ejs') %>
-        <main>
-            <h1>De data van '45</h1>
-            <img src="datavisualisatie.jpg" alt="Datavisualisation Design of the war graves in Amsterdam" />
+        <main class="detail">
+            <section class="intro">
+                <div>
+                    <h1>De data van '45</h1>
+                    <p>
+                        A datavisualization of the fallen in WOII
+                    </p>
+                </div>
+                <%- include('../partials/scroll.ejs') %>
+            </section>
+            <img src="/img/datavisualisatie.jpg" alt="Datavisualisation Design of the war graves in Amsterdam" />
             <p class="role">
                 Visual Design
             </p>
@@ -23,6 +31,7 @@
             <p>
                 lorem
             </p>
+            <a href="https://studie.timoverkroost.nl/nieuweooster/">View demo</a>
         </main>
         <%- include('../partials/footer.ejs') %>
     </body>

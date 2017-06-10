@@ -47,15 +47,15 @@ body {
     position: relative;
 }
 
-h1, h2 , h3 {
-    font-family: 'Lobster', cursive;
-}
-
-h4 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    letter-spacing: 0.25rem;
+header {
+    display: flex;
+    left: 0;
+    padding: 0.5rem;
+    position: absolute;
+    justify-content: space-between;
+    right: 0;
+    top: 0;
+    z-index: 1;
 }
 
 /* If main is not supported*/
@@ -63,15 +63,51 @@ main {
     display: block;
 }
 
-main > section {
-    padding: 0 8px;
-    padding: 0 0.5rem;
+h1, h2 , h3 {
+    font-family: 'Lobster', cursive;
+}
+
+h1 {
+    font-size: 64px;
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    letter-spacing: 0.25rem;
+}
+
+a, a:visited {
+    color: #13818A;
+}
+
+a:hover {
+    color: #19A3A6;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
 }
 
 footer {
-    background-color: white;
     bottom: 0;
+    color: #8A8484;
     display: flex;
+    font-style: italic;
     padding: 8px;
     padding: 0.5rem;
     position: absolute;
@@ -80,36 +116,73 @@ footer {
 }
 
 footer p {
+    font-size: 15px;
+    font-size: 0.9rem;
     margin: 0;
     padding-left: 8px;
     padding-left: 0.5rem;
 }
 
 footer img {
-    height: 16px;
-    height: 1rem;
+    height: 24px;
+    height: 1.5rem;
 }
 
 header img {
     width: 48px;
-    width: 3rem;
+    width: 2rem;
 }
 
 h2 span {
     color: #E3003A;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    letter-spacing: 0.15rem;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0.5rem;
+    position: relative;
+}
+
+nav a, nav a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+nav a::after {
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+main > section {
+    padding: 0 8px;
+    padding: 0 0.5rem;
+}
+
 .intro {
     background-color: #E3003A;
     color: white;
     height: 100vh;
+    padding: 0;
     position: relative;
     width: 100vw;
 }
 
 .scrollanim {
     animation: jump 2s linear infinite;
-    bottom: 1rem;
+    bottom: 2rem;
     margin: 0;
     position: absolute;
     left: 0;
@@ -117,8 +190,19 @@ h2 span {
     text-align: center;
 }
 
+div.intro h1 {
+    top: 45%;
+}
+
 .home footer {
     display: none;
+}
+
+[href="#top"]{
+    bottom: 0.7rem;
+    position: absolute;
+    right: 0.5rem;
+    z-index: 1;
 }
 
 /* HOME */
@@ -129,4 +213,86 @@ h2 span {
     top: 50%;
     text-align: center;
     transform: translateY(-50%);
+}
+
+/* ABOUT */
+.resume {
+    padding-bottom: 3rem;
+}
+
+/* WORK */
+.hatepage {
+    padding-bottom: 3rem;
+}
+
+.work a, .work a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* CONTACT */
+.contact {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+.socialmedia a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.socialmedia svg {
+    padding: 6px;
+    padding: 0.4rem;
+    width: 48px;
+    width: 3rem;
+}
+
+.socialmedia svg:hover {
+    background-color: #E3003A;
+}
+
+.socialmedia svg:hover .st0 {
+    stroke: white;
+}
+
+.socialmedia svg:hover .st1 {
+    stroke: white;
+    fill: white;
+}
+
+.socialmedia svg:hover .st2 {
+    fill: #E3003A;
+}
+
+.socialmedia a[href="https://github.com/ChanelZM"] svg .st0 {
+    fill: #13818A;
+}
+
+.socialmedia a[href="https://github.com/ChanelZM"] svg .st1 {
+    fill: none;
+    stroke: #13818A;
+}
+
+.socialmedia a[href="https://github.com/ChanelZM"] svg:hover .st0 {
+    fill: white;
+}
+
+.socialmedia a[href="https://github.com/ChanelZM"] svg:hover .st1 {
+    fill: none;
+    stroke: white;
+}
+
+/* DETAIL PAGE*/
+.detail img {
+    width: 100%;
+}
+
+.intro > div {
+    margin: 0 2rem;
+}
+
+.detail .intro {
+    background-color: #13818A;
 }
