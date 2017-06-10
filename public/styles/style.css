@@ -1,0 +1,47 @@
+/*
+COLORS:
+red: #E3003A
+darkblue: #13818A
+blue: #19A3A6
+darkgrey: #8A8484
+lightgrey: #F2EDF1
+*/
+
+/* GENERAL */
+/* regular */
+@font-face {
+    font-family: 'August';
+    src: url('../fonts/AugustSans-55Regular.otf');
+    src: url('../fonts/AugustSans-55Regular.ttf');
+}
+
+/* bold */
+@font-face {
+    font-family: 'August';
+    src: url('../fonts/AugustSans-55Regular.otf');
+    src: url('../fonts/AugustSans-55Regular.ttf');
+    font-weight: bold;
+}
+
+/* italic */
+@font-face {
+    font-family: 'August';
+    src: url('../fonts/AugustSans-55RegularItalic.otf');
+    src: url('../fonts/AugustSans-55RegularItalic.ttf');
+    font-style: italic;
+}
+
+body {
+    font-family: 'August';
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 , h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+/* If main is not supported*/
+main {
+    display: block;
+}

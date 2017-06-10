@@ -1,27 +1,38 @@
-<%- include('../partials/header.ejs') %>
-<div>
-    <h1>About</h1>
-</div>
-<section class="personally">
-  <h2>Little bit about me</h2>
-    <p> I’m a UX Designer and Developer living in Amsterdam, the Netherlands. I study Communication &amp; Multimedia Design at the Hogeschool van Amsterdam and in my free time I love playing videogames, occasionally making drawings and digitalising them. </p>
-    <p> The two traits that define me is being annoyingly organised and being a perfectionist. I like to make a plan that is well structured in order to achieve a goal that has been set, but i’m also flexible enough to adjust this plan if necessary. Because I’m a perfectionist I don’t stop until I’m satisfied with my work and I always aim for something better so that I can outdo myself. </p>
-</section>
-<section class="visualdesign">
-  <h2>I'm a <span>Webdesigner</span></h2>
-  <p>
-    I believe that creating a good visual design also contributes to serving a good user experience. It guides the users through the webpage and it will help them find what they are looking for. As a UX'er I'm aspired to bring the best user experience possible.
-  </p>
-</section>
-<section class="frontender">
-  <h2>I'm a <span>Crazy Coder</span></h2>
-  <p>
-    Another fundamental part of UX is Front-End Development. It's one thing to build a website, it's another thing to make it accessible for everybody regardless of disabilities, using a very old computer/browser or having slow internet connection. As a code nerd I take all these aspects into account to provide accessibility.
-  </p>
-</section>
-<section class="resume">
-  <h2>Work Experience</h2>
-  <p> If you want to know more about my work experience take a look at my resume!</p>
-  <img  />
-</section>
-<%- include('../partials/footer.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Chanel Mepschen - About</title>
+      <%- include('../partials/style.ejs') %>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main>
+            <div>
+                <h1>About</h1>
+            </div>
+            <section class="personally">
+                <h2>Little bit about me</h2>
+                <p> I’m a UX Designer and Developer living in Amsterdam, the Netherlands. I study Communication &amp; Multimedia Design at the Hogeschool van Amsterdam and in my free time I love playing videogames, occasionally making drawings and digitalising them. </p>
+                <p> The two traits that define me is being annoyingly organised and being a perfectionist. I like to make a plan that is well structured in order to achieve a goal that has been set, but i’m also flexible enough to adjust this plan if necessary. Because I’m a perfectionist I don’t stop until I’m satisfied with my work and I always aim for something better so that I can outdo myself. </p>
+            </section>
+            <section class="visualdesign">
+                <h2>I'm a <span>Webdesigner</span></h2>
+                    <p>I believe that creating a good visual design also contributes to serving a good user experience. It guides the users through the webpage and it will help them find what they are looking for. As a UX'er I'm aspired to bring the best user experience possible.</p>
+            </section>
+            <section class="frontender">
+                <h2>I'm a <span>Crazy Coder</span></h2>
+                <p>Another fundamental part of UX is Front-End Development. It's one thing to build a website, it's another thing to make it accessible for everybody regardless of disabilities, using a very old computer/browser or having slow internet connection. As a code nerd I take all these aspects into account to provide accessibility.</p>
+            </section>
+            <section class="resume">
+                <h2>Work Experience</h2>
+                <p> If you want to know more about my work experience take a look at my resume!</p>
+                <a href="/"><img  /></a>
+            </section>
+
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

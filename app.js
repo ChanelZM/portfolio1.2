@@ -15,6 +15,9 @@ app.use('/', homeRouter);
 app.use('/about', aboutRouter);
 app.use('/work', workRouter);
 app.use('/contact', contactRouter);
+app.use('/*', function(req, res){
+    res.send('Oops.. page not found');
+});
 
 app.listen(4000, function () {
   console.log("Running at port 4000");
