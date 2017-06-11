@@ -67,26 +67,28 @@ main {
 h1, h2 , h3 {
     font-family: 'Lobster', cursive;
     font-weight: normal;
+    margin: 0;
 }
 
 h1 {
     font-size: 56px;
     font-size: 3.5rem;
-    margin: 0;
 }
 
 h2 {
     color: #4A4A4A;
     font-size: 32px;
     font-size: 2rem;
+    padding: 0.5rem 0;
 }
 
 h3 {
     color: #4A4A4A;
     font-size: 1.4rem;
+    padding: 0.5rem 0;
 }
 
-h4 {
+h4, .work p {
     font-size: 12px;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -200,7 +202,7 @@ main > section {
 }
 
 div.intro h1 {
-    top: 45%;
+    top: 50%;
 }
 
 [href="#top"]{
@@ -298,9 +300,79 @@ div.intro h1 {
     padding-bottom: 3rem;
 }
 
+.works {
+    padding-bottom: 3rem;
+}
+
+.data45 {
+    background: url('../img/xsmall-ooster.jpg') no-repeat;
+}
+
+.xdconference {
+    background: url('../img/xsmall-xd.jpg') no-repeat;
+}
+
+.blackops {
+    background: url('../img/xsmall-blackops.jpg') no-repeat;
+}
+
+.ingapp {
+    background: url('../img/xsmall-ing.jpg') no-repeat;
+}
+
+.hatepage {
+    background: url('../img/xsmall-trump.jpg') no-repeat;
+}
+
+main .work {
+    background-position: center;
+    background-size: 100vw auto;
+    height: 50vw;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+}
+
+.work div {
+    background-color: rgba(25, 163, 166, 0.6);
+    bottom: 0;
+    left: 0;
+    padding-top: 15vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+.work p {
+    background-color: #E3003A;
+    color: white;
+    display: none;
+    margin: 0;
+    padding: 0.2rem 0.2rem 0 0.2rem;
+}
+
+.work div:hover {
+    background-color: rgba(25, 163, 166, 0.9);
+}
+
+.work div:hover p {
+    display: inline-block;
+}
+
 .work a, .work a:visited {
-    color: #4A4A4A;;
+    color: white;
     text-decoration: none;
+}
+
+.work a::after {
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 /* CONTACT */
@@ -371,13 +443,13 @@ div.intro h1 {
     padding: 0 0.5rem;
 }
 
+.detail .intro {
+    background-color: #13818A;
+}
+
 .detail .intro div {
     margin: 0 32px;
     margin: 0 2rem;
-}
-
-.detail .intro {
-    background-color: #13818A;
 }
 
 .detail > p:last-of-type {
