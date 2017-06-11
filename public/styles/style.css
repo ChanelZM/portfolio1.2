@@ -228,7 +228,7 @@ a.view {
     transition: background-color 0.2s;
 }
 
-a.view:hover {
+a.view:hover
     background-color: #7C3A4A;
 }
 
@@ -303,7 +303,7 @@ div.intro h1 {
     margin: 0.2rem 0;
 }
 
-.home  h2, .detail .intro p {
+.home  h2, .detail .intro p, .role {
     font-family: 'August', sans-serif;
     font-size: 16px;
     font-size: 1rem;
@@ -465,6 +465,10 @@ main .work {
 
 .socialmedia {
     padding-bottom: 3rem;
+}
+
+.role {
+    color: #8A8484;
 }
 
 .socialmedia a {
