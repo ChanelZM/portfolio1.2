@@ -23,7 +23,7 @@ router.get('/xdconference', function(req, res){
 });
 
 router.get('/hatepage', function(req, res){
-    res.send('Coming soon!');
+    res.render('content/trumphatepage');
 });
 
 module.exports = router;
