@@ -118,6 +118,10 @@ p {
     line-height: 1.8rem;
 }
 
+strong {
+    color: #19A3A6;
+}
+
 footer {
     bottom: 0;
     color: #8A8484;
@@ -205,7 +209,27 @@ main > section {
     left: 45%;
     right: 0;
     text-align: center;
+    width: 32px;
     width: 2rem;
+}
+
+a.view {
+    background-color: #E3003A;
+    color: white;
+    display: inline-block;
+    font-family: 'Lobster', cursive;
+    font-size: 19px;
+    font-size: 1.2rem;
+    margin: 0 0 8px 8px;
+    margin: 0 0 0.5rem 0.5rem;
+    padding: 8px;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+a.view:hover {
+    background-color: #7C3A4A;
 }
 
 div.intro h1 {
@@ -215,7 +239,7 @@ div.intro h1 {
 @supports(animation: fadeIn){
     body:not([class="home"]) header {
         animation: fadeIn ease-in;
-        animation-delay: 1s;
+        animation-delay: 0.6s;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
         opacity: 0;
@@ -495,7 +519,7 @@ main .work {
     width: 100%;
 }
 
-.detail p, .detail h2 {
+.detail p, .detail h2, .detail h3 {
     padding: 0 8px;
     padding: 0 0.5rem;
 }
