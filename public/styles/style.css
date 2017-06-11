@@ -41,6 +41,15 @@ lightgrey: #F2EDF1
     100%{transform: translateY(-50%)}
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
     font-family: 'August', sans-serif;
     margin: 0;
@@ -154,6 +163,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
+    opacity: 1;
     padding: 0.5rem;
     position: relative;
 }
@@ -195,14 +205,28 @@ main > section {
     left: 45%;
     right: 0;
     text-align: center;
-}
-
-.scrollanim {
     width: 2rem;
 }
 
 div.intro h1 {
     top: 50%;
+}
+
+@supports(animation: fadeIn){
+    body:not([class="home"]) header {
+        animation: fadeIn ease-in;
+        animation-delay: 1s;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    div.intro {
+        animation: fadeIn ease-in;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
 }
 
 [href="#top"]{
@@ -281,6 +305,39 @@ div.intro h1 {
     background: url('../img/logo.svg') no-repeat;
     background-position: center;
     opacity: 0.3;
+}
+
+@supports(animation: fadeIn){
+    .home .intro div {
+        animation: fadeIn ease-in;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    .home .topnav  li:nth-of-type(1) {
+        animation: fadeIn ease-in;
+        animation-delay: 1s;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    .home .topnav  li:nth-of-type(2) {
+        animation: fadeIn ease-in;
+        animation-delay: 2s;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    .home .topnav  li:nth-of-type(3) {
+        animation: fadeIn ease-in;
+        animation-delay: 3s;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
 }
 
 .home .intro img {
@@ -445,6 +502,15 @@ main .work {
 
 .detail .intro {
     background-color: #13818A;
+}
+
+@supports(animation: fadeIn){
+    .detail .intro {
+        animation: fadeIn ease-in;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
 }
 
 .detail .intro div {
