@@ -4,6 +4,7 @@ red: #E3003A
 darkblue: #13818A
 blue: #19A3A6
 darkgrey: #8A8484
+blackgrey: #4A4A4A
 lightgrey: #F2EDF1
 */
 
@@ -17,15 +18,15 @@ lightgrey: #F2EDF1
 
 /* bold */
 @font-face {
-    font-family: 'August';
-    src: url('../fonts/AugustSans-55Regular.otf');
-    src: url('../fonts/AugustSans-55Regular.ttf');
+    font-family: 'August Bold';
+    src: url('../fonts/AugustSans-75Bold.otf');
+    src: url('../fonts/AugustSans-75Bold.ttf');
     font-weight: bold;
 }
 
 /* italic */
 @font-face {
-    font-family: 'August';
+    font-family: 'August Italic';
     src: url('../fonts/AugustSans-55RegularItalic.otf');
     src: url('../fonts/AugustSans-55RegularItalic.ttf');
     font-style: italic;
@@ -65,6 +66,7 @@ main {
 
 h1, h2 , h3 {
     font-family: 'Lobster', cursive;
+    font-weight: normal;
 }
 
 h1 {
@@ -74,11 +76,13 @@ h1 {
 }
 
 h2 {
+    color: #4A4A4A;
     font-size: 32px;
     font-size: 2rem;
 }
 
 h3 {
+    color: #4A4A4A;
     font-size: 1.4rem;
 }
 
@@ -215,10 +219,38 @@ div.intro h1 {
     transform: translateY(-50%);
 }
 
+.topnav  li:hover::before {
+    background: url('../img/logo-white.svg') no-repeat;
+    background-position: center;
+    bottom: 0;
+    content: '';
+    height: 2rem;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 /* HOME */
+.home header {
+    display: block;
+    text-align: center;
+}
+
+.home header a {
+    color: #E3003A;
+}
+
 .home  h1, .detail h1 {
     font-size: 24px;
     font-size: 2.5rem;
+}
+
+.home h2 {
+    color: #8A8484;
+    margin: 3px 0;
+    margin: 0.2rem 0;
 }
 
 .home  h2, .detail .intro p {
@@ -230,8 +262,28 @@ div.intro h1 {
     text-transform: uppercase;
 }
 
-.home footer {
+.home footer, .home header img  {
     display: none;
+}
+
+.home .intro {
+    background-color: white;
+    color: #E3003A;
+}
+
+.home .topnav  li {
+    position: relative;
+}
+
+.home .topnav  li:hover::before {
+    background: url('../img/logo.svg') no-repeat;
+    background-position: center;
+    opacity: 0.3;
+}
+
+.home .intro img {
+    width: 48px;
+    width: 3rem;
 }
 
 /* ABOUT */
@@ -247,15 +299,19 @@ div.intro h1 {
 }
 
 .work a, .work a:visited {
-    color: black;
+    color: #4A4A4A;;
     text-decoration: none;
 }
 
 /* CONTACT */
 .contact {
     box-sizing: border-box;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+}
+
+.socialmedia {
+    padding-bottom: 3rem;
 }
 
 .socialmedia a {
