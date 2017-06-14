@@ -19,6 +19,6 @@ app.use('/*', function(req, res){
     res.send('Oops.. page not found');
 });
 
-app.listen(4000, function () {
+app.listen(4000 || process.env.PORT, function () {
   console.log("Running at port 4000");
 });
