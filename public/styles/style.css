@@ -581,3 +581,47 @@ main .work {
     padding-bottom: 48px;
     padding-bottom: 3rem;
 }
+
+@media screen and (min-width: 26rem){
+    .hatepage {
+        background: url('../img/small-trump.jpg') no-repeat;
+    }
+
+    .data45 {
+        background: url('../img/small-ooster.jpg') no-repeat;
+    }
+
+    .xdconference {
+        background: url('../img/small-xd.jpg') no-repeat;
+    }
+
+    .blackops {
+        background: url('../img/small-blackops.jpg') no-repeat;
+    }
+
+    .ingapp {
+        background: url('../img/small-ing.jpg') no-repeat;
+    }
+}
+
+@media screen and (min-width: 40rem){
+    .hatepage {
+        background: url('../img/medium-trump.jpg') no-repeat;
+    }
+
+    .data45 {
+        background: url('../img/medium-ooster.jpg') no-repeat;
+    }
+
+    .xdconference {
+        background: url('../img/medium-xd.jpg') no-repeat;
+    }
+
+    .blackops {
+        background: url('../img/medium-blackops.jpg') no-repeat;
+    }
+
+    .ingapp {
+        background: url('../img/medium-ing.jpg') no-repeat;
+    }
+}
