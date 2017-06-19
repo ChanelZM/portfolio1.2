@@ -177,6 +177,10 @@ nav a, nav a:visited {
     text-decoration: none;
 }
 
+nav a:hover {
+    color: white;
+}
+
 nav a::after {
     bottom: 0;
     content: '';
@@ -206,9 +210,12 @@ main > section {
     bottom: 4rem;
     margin: 0;
     position: absolute;
-    left: 45%;
+    left: 0;
     right: 0;
     text-align: center;
+}
+
+.scrollanim img {
     width: 32px;
     width: 2rem;
 }
