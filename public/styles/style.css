@@ -16,7 +16,6 @@ lightgrey: #F2EDF1
     src: url('../fonts/AugustSans-55Regular.otf');
     src: url('../fonts/AugustSans-55Regular.ttf');
 }
-
 /* bold */
 @font-face {
     font-family: 'August Bold';
@@ -24,7 +23,6 @@ lightgrey: #F2EDF1
     src: url('../fonts/AugustSans-75Bold.ttf');
     font-weight: bold;
 }
-
 /* italic */
 @font-face {
     font-family: 'August Italic';
@@ -32,7 +30,6 @@ lightgrey: #F2EDF1
     src: url('../fonts/AugustSans-55RegularItalic.ttf');
     font-style: italic;
 }
-
 @keyframes jump {
     0%{transform: translateY(-50%)}
     10%{transform: translateY(0%)}
@@ -41,7 +38,6 @@ lightgrey: #F2EDF1
     90%{transform: translateY(0%)}
     100%{transform: translateY(-50%)}
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -50,14 +46,12 @@ lightgrey: #F2EDF1
         opacity: 1;
     }
 }
-
 body {
     font-family: 'August', sans-serif;
     margin: 0;
     padding: 0;
     position: relative;
 }
-
 header {
     display: flex;
     left: 0;
@@ -68,36 +62,30 @@ header {
     top: 0;
     z-index: 1;
 }
-
 /* If main is not supported*/
 main {
     display: block;
 }
-
 h1, h2 , h3 {
     font-family: 'Lobster', cursive;
     font-weight: normal;
     margin: 0;
 }
-
 h1 {
     font-size: 56px;
     font-size: 3.5rem;
 }
-
 h2 {
     color: #4A4A4A;
     font-size: 32px;
     font-size: 2rem;
     padding: 0.5rem 0;
 }
-
 h3 {
     color: #4A4A4A;
     font-size: 1.4rem;
     padding: 0.5rem 0;
 }
-
 h4, .work p {
     font-size: 12px;
     font-size: 0.8rem;
@@ -105,23 +93,19 @@ h4, .work p {
     letter-spacing: 4px;
     letter-spacing: 0.25rem;
 }
-
 a, a:visited {
     color: #13818A;
 }
-
 a:hover {
     color: #19A3A6;
     cursor: pointer;
 }
-
 p {
     font-size: 19px;
     font-size: 1.2rem;
     line-height: 24px;
     line-height: 1.5rem;
 }
-
 blockquote {
     display: none;
     font-family: Lobster, cursive;
@@ -129,22 +113,19 @@ blockquote {
     font-size: 2.5rem;
     text-align: left;
 }
-
 blockquote::before, blockquote::after {
     color: #8A8484;
     content: '"';
     display: block;
     font-family: 'Catamaran', serif;
-    height: 128px;
-    height: 8rem;
-    font-size: 128px;
-    font-size: 8rem;
+    height: 80px;
+    height: 5rem;
+    font-size: 80px;
+    font-size: 5rem;
 }
-
 strong {
     color: #19A3A6;
 }
-
 footer {
     bottom: 0;
     color: #8A8484;
@@ -156,7 +137,6 @@ footer {
     left: 0;
     right: 0;
 }
-
 footer p {
     font-size: 15px;
     font-size: 0.9rem;
@@ -164,21 +144,17 @@ footer p {
     padding-left: 8px;
     padding-left: 0.5rem;
 }
-
 footer img {
     height: 24px;
     height: 1.5rem;
 }
-
 header img {
     width: 48px;
     width: 2rem;
 }
-
 h2 span {
     color: #E3003A;
 }
-
 nav ul {
     list-style: none;
     margin: 0;
@@ -187,23 +163,19 @@ nav ul {
     letter-spacing: 2px;
     letter-spacing: 0.15rem;
 }
-
 nav ul li {
     display: inline-block;
     opacity: 1;
     padding: 0.5rem;
     position: relative;
 }
-
 nav a, nav a:visited {
     color: white;
     text-decoration: none;
 }
-
 nav a:hover {
     color: white;
 }
-
 nav a::after {
     bottom: 0;
     content: '';
@@ -212,12 +184,10 @@ nav a::after {
     right: 0;
     top: 0;
 }
-
 main > section {
     padding: 0 8px;
     padding: 0 0.5rem;
 }
-
 .intro {
     background-color: #E3003A;
     color: white;
@@ -226,7 +196,6 @@ main > section {
     position: relative;
     width: 100vw;
 }
-
 .scrollanim {
     animation: jump 2s linear infinite;
     bottom: 64px;
@@ -237,12 +206,10 @@ main > section {
     right: 0;
     text-align: center;
 }
-
 .scrollanim img {
     width: 32px;
     width: 2rem;
 }
-
 a.view {
     background-color: #E3003A;
     color: white;
@@ -257,15 +224,12 @@ a.view {
     text-decoration: none;
     transition: background-color 0.2s;
 }
-
 a.view:hover {
     background-color: #7C3A4A;
 }
-
 div.intro h1 {
     top: 50%;
 }
-
 @supports(animation: fadeIn){
     body:not([class="home"]) header {
         animation: fadeIn ease-in;
@@ -274,7 +238,6 @@ div.intro h1 {
         animation-fill-mode: forwards;
         opacity: 0;
     }
-
     div.intro {
         animation: fadeIn ease-in;
         animation-duration: 0.5s;
@@ -282,14 +245,12 @@ div.intro h1 {
         opacity: 0;
     }
 }
-
 [href="#top"]{
     bottom: 0.7rem;
     position: absolute;
     right: 0.5rem;
     z-index: 1;
 }
-
 .intro > div, .intro > h1 {
     position: absolute;
     left: 0;
@@ -298,7 +259,6 @@ div.intro h1 {
     text-align: center;
     transform: translateY(-50%);
 }
-
 .topnav  li:hover::before {
     background: url('../img/logo-white.svg') no-repeat;
     background-position: center;
@@ -317,22 +277,18 @@ div.intro h1 {
     display: block;
     text-align: center;
 }
-
 .home header a {
     color: #E3003A;
 }
-
 .home  h1, .detail h1 {
     font-size: 24px;
     font-size: 2.5rem;
 }
-
 .home h2 {
     color: #8A8484;
     margin: 3px 0;
     margin: 0.2rem 0;
 }
-
 .home  h2, .detail .intro p, .role {
     font-family: 'August', sans-serif;
     font-size: 16px;
@@ -341,26 +297,21 @@ div.intro h1 {
     letter-spacing: 0.25rem;
     text-transform: uppercase;
 }
-
 .home footer, .home header img  {
     display: none;
 }
-
 .home .intro {
     background-color: white;
     color: #E3003A;
 }
-
 .home .topnav  li {
     position: relative;
 }
-
 .home .topnav  li:hover::before {
     background: url('../img/logo.svg') no-repeat;
     background-position: center;
     opacity: 0.3;
 }
-
 @supports(animation: fadeIn){
     .home .intro div {
         animation: fadeIn ease-in;
@@ -368,7 +319,6 @@ div.intro h1 {
         animation-fill-mode: forwards;
         opacity: 0;
     }
-
     .home .topnav  li:nth-of-type(1) {
         animation: fadeIn ease-in;
         animation-delay: 1s;
@@ -376,7 +326,6 @@ div.intro h1 {
         animation-fill-mode: forwards;
         opacity: 0;
     }
-
     .home .topnav  li:nth-of-type(2) {
         animation: fadeIn ease-in;
         animation-delay: 2s;
@@ -384,7 +333,6 @@ div.intro h1 {
         animation-fill-mode: forwards;
         opacity: 0;
     }
-
     .home .topnav  li:nth-of-type(3) {
         animation: fadeIn ease-in;
         animation-delay: 3s;
@@ -393,7 +341,6 @@ div.intro h1 {
         opacity: 0;
     }
 }
-
 .home .intro img {
     width: 48px;
     width: 3rem;
@@ -410,31 +357,24 @@ div.intro h1 {
     padding-bottom: 48px;
     padding-bottom: 3rem;
 }
-
 .works {
     padding-bottom: 3rem;
 }
-
 .data45 {
     background: url('../img/xsmall-ooster.jpg') no-repeat;
 }
-
 .xdconference {
     background: url('../img/xsmall-xd.jpg') no-repeat;
 }
-
 .blackops {
     background: url('../img/xsmall-blackops.jpg') no-repeat;
 }
-
 .ingapp {
     background: url('../img/xsmall-ing.jpg') no-repeat;
 }
-
 .hatepage {
     background: url('../img/xsmall-trump.jpg') no-repeat;
 }
-
 main .work {
     background-position: center;
     background-size: 100vw auto;
@@ -443,7 +383,6 @@ main .work {
     position: relative;
     width: 100vw;
 }
-
 .work div {
     background-color: rgba(25, 163, 166, 0.6);
     bottom: 0;
@@ -455,7 +394,6 @@ main .work {
     text-align: center;
     transition: background-color 0.5s;
 }
-
 .work p {
     background-color: #E3003A;
     color: white;
@@ -463,37 +401,29 @@ main .work {
     margin: 0;
     padding: 0.2rem 0.2rem 0 0.2rem;
 }
-
 .resume svg {
     float: left;
     margin: 1rem 0.5rem 0 0;
 }
-
 .resume svg:hover #Rectangle-78, .resume svg:hover #Line-Copy, .resume svg:hover #Line-Copy-3, .resume svg:hover #Line-Copy-4, .resume svg:hover #Line-Copy-2, .resume svg:hover #Oval-1-Copy, .resume svg:hover #Oval-1, .resume svg:hover #Line-Copy-5 {
     stroke: #E3003A;
 }
-
 .resume svg:hover #Fill-2-Copy-2 {
     fill: white;
 }
-
 .resume svg:hover #Stroke-1-Copy {
     stroke: white;
 }
-
 .resume svg:hover {
     background-color: #E3003A;
 }
-
 .work div:hover {
     background-color: rgba(25, 163, 166, 0.9);
 }
-
 .work a, .work a:visited {
     color: white;
     text-decoration: none;
 }
-
 .work a::after {
     bottom: 0;
     content: '';
@@ -502,7 +432,6 @@ main .work {
     right: 0;
     top: 0;
 }
-
 .work div:hover p {
     display: inline-block;
 }
@@ -513,57 +442,45 @@ main .work {
     min-height: 100vh;
     width: 100vw;
 }
-
 .socialmedia {
     padding-bottom: 3rem;
 }
-
 .role {
     color: #8A8484;
 }
-
 .socialmedia a {
     display: inline-block;
     text-decoration: none;
 }
-
 .socialmedia svg {
     padding: 6px;
     padding: 0.4rem;
     width: 48px;
     width: 3rem;
 }
-
 .socialmedia svg:hover {
     background-color: #E3003A;
 }
-
 .socialmedia svg:hover .st0 {
     stroke: white;
 }
-
 .socialmedia svg:hover .st1 {
     stroke: white;
     fill: white;
 }
-
 .socialmedia svg:hover .st2 {
     fill: #E3003A;
 }
-
 .socialmedia a[href="https://github.com/ChanelZM"] svg .st0 {
     fill: #13818A;
 }
-
 .socialmedia a[href="https://github.com/ChanelZM"] svg .st1 {
     fill: none;
     stroke: #13818A;
 }
-
 .socialmedia a[href="https://github.com/ChanelZM"] svg:hover .st0 {
     fill: white;
 }
-
 .socialmedia a[href="https://github.com/ChanelZM"] svg:hover .st1 {
     fill: none;
     stroke: white;
@@ -574,15 +491,12 @@ main .work {
     padding: 0 8px;
     padding: 0 0.5rem;
 }
-
 .detail .intro {
     background-color: #13818A;
 }
-
 .detail > img {
     width: 100%;
 }
-
 @supports(animation: fadeIn){
     .detail .intro {
         animation: fadeIn ease-in;
@@ -591,17 +505,14 @@ main .work {
         opacity: 0;
     }
 }
-
 .detail .intro p, .detail .role {
     font-size: 13px;
     font-size: 0.8rem;
 }
-
 .detail .intro div {
     margin: 0 32px;
     margin: 0 2rem;
 }
-
 .detail > p:last-of-type {
     margin-bottom: 0;
     padding-bottom: 48px;
@@ -612,28 +523,22 @@ main .work {
     .hatepage {
         background: url('../img/small-trump.jpg') no-repeat;
     }
-
     .data45 {
         background: url('../img/small-ooster.jpg') no-repeat;
     }
-
     .xdconference {
         background: url('../img/small-xd.jpg') no-repeat;
     }
-
     .blackops {
         background: url('../img/small-blackops.jpg') no-repeat;
     }
-
     .ingapp {
         background: url('../img/small-ing.jpg') no-repeat;
     }
-
     main > section {
         margin-left: auto;
         margin-right: auto;
     }
-
     .detail .intro p, .detail .role {
         font-size: 16px;
         font-size: 1rem;
@@ -643,35 +548,31 @@ main .work {
 }
 
 @media screen and (min-width: 40rem){
-    blockquote {
-        display: block;
-        font-size: 3.5rem;
-        margin: 3rem 3rem 0 3rem;
-        order: 1;
-    }
     .topnav {
-        margin-left: 48px;
-        margin-left: 3rem;
-        margin-top: 3rem;
+        margin-left: 32px;
+        margin-left: 2rem;
+        margin-top: 2rem;
     }
     .hatepage {
         background: url('../img/medium-trump.jpg') no-repeat;
     }
-
     .data45 {
         background: url('../img/medium-ooster.jpg') no-repeat;
     }
-
     .xdconference {
         background: url('../img/medium-xd.jpg') no-repeat;
     }
-
     .blackops {
         background: url('../img/medium-blackops.jpg') no-repeat;
     }
-
     .ingapp {
         background: url('../img/medium-ing.jpg') no-repeat;
+    }
+    .home blockquote {
+        display: block;
+        font-size: 3.5rem;
+        margin: 2rem 2rem 0 2rem;
+        order: 1;
     }
     .home div {
         display: flex;
@@ -679,22 +580,23 @@ main .work {
     }
     .home h1 {
         filter: grayscale(100%);
-        margin-left: 3rem;
+        font-size: 1.9rem;
+        margin-left: 2rem;
         opacity: 0.6;
         order: 3;
         text-align: left;
     }
     .home h2 {
-        margin-left: 5.4rem;
+        font-size: 0.9rem;
+        margin-left: 3.6rem;
         order: 4;
         text-align: left;
     }
     .topnav ul {
         text-align: left;
-        font-size: 24px;
-        font-size: 1.2rem;
+        font-size: 17px;
+        font-size: 1.1rem;
     }
-
     .topnav li {
         display: block;
         padding-left: 0;
@@ -714,9 +616,9 @@ main .work {
     }
     .home .intro  img {
         filter: grayscale(100%);
-        margin: 0 0 1rem 9.5rem;
+        margin: 0 0 1rem 7rem;
         opacity: 0.6;
         order: 2;
-        width: 2.5rem;
+        width: 2.2rem;
     }
 }
