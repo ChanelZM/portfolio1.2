@@ -107,10 +107,11 @@ p {
     line-height: 1.5rem;
 }
 blockquote {
+    color: #E3003A;
     display: none;
     font-family: Lobster, cursive;
-    font-size: 40px;
-    font-size: 2.5rem;
+    font-size: 32px;
+    font-size: 2rem;
     text-align: left;
 }
 blockquote::before, blockquote::after {
@@ -520,6 +521,10 @@ main .work {
 }
 
 @media screen and (min-width: 26rem){
+    p {
+        line-height: 32px;
+        line-height: 2rem;
+    }
     .hatepage {
         background: url('../img/small-trump.jpg') no-repeat;
     }
@@ -547,11 +552,45 @@ main .work {
     }
 }
 
+@media screen and (min-width: 31rem){
+    a {
+        font-size: 1.2rem;
+    }
+    h2 a {
+        font-size: 2.2rem;
+    }
+    header img {
+        width: 2.2rem;
+    }
+    section h2 {
+        font-size: 2.3rem;
+    }
+    .personally, .visualdesign, .frontender, .resume {
+        max-width: 35rem;
+    }
+    .home h1 {
+        font-size: 56px;
+        font-size: 3.5rem;
+    }
+    .home h2 {
+        font-size: 23px;
+        font-size: 1.4rem;
+    }
+    .home .topnav li {
+        width: 6rem;
+    }
+    body:not([class="home"]) .intro h1 {
+        font-size: 4.5rem;
+    }
+    .topnav li {
+        font-size: 1.2rem;
+    }
+}
+
 @media screen and (min-width: 40rem){
-    .topnav {
-        margin-left: 32px;
-        margin-left: 2rem;
-        margin-top: 2rem;
+    blockquote {
+        display: block;
+        text-align: center;
     }
     .hatepage {
         background: url('../img/medium-trump.jpg') no-repeat;
@@ -568,10 +607,12 @@ main .work {
     .ingapp {
         background: url('../img/medium-ing.jpg') no-repeat;
     }
+    .home {
+        height: 100vh;
+    }
     .home blockquote {
-        display: block;
-        font-size: 3.5rem;
-        margin: 2rem 2rem 0 2rem;
+        font-size: 4rem;
+        margin: 2rem 2rem 2rem 2rem;
         order: 1;
     }
     .home div {
@@ -581,44 +622,73 @@ main .work {
     .home h1 {
         filter: grayscale(100%);
         font-size: 1.9rem;
-        margin-left: 2rem;
         opacity: 0.6;
         order: 3;
-        text-align: left;
     }
     .home h2 {
         font-size: 0.9rem;
-        margin-left: 3.6rem;
         order: 4;
-        text-align: left;
-    }
-    .topnav ul {
-        text-align: left;
-        font-size: 17px;
-        font-size: 1.1rem;
     }
     .topnav li {
-        display: block;
-        padding-left: 0;
-    }
-    .intro > div {
-        position: static;
-        transform: none;
-    }
-    .home #top {
-        position: static;
+        font-size: 1.5rem;
     }
     .home header a {
         color: #333;
     }
     .home .intro {
-        height: auto;
+        min-height: 100vh;
     }
-    .home .intro  img {
+    .home .intro img {
         filter: grayscale(100%);
-        margin: 0 0 1rem 7rem;
+        margin-left: auto;
+        margin-right: auto;
         opacity: 0.6;
         order: 2;
-        width: 2.2rem;
+        width: 37px;
+        width: 2.3rem;
+    }
+    .home .topnav li {
+        width: 6rem;
+    }
+}
+
+@media screen and (min-width: 71rem){
+    main {
+        margin-left: 9.8rem;
+    }
+    .intro {
+        width: auto;
+    }
+    .home header img {
+        animation: fadeIn 0.5s;
+        display: block;
+        width: 3rem;
+    }
+    #top {
+        background-color: #E3003A;
+        bottom: 0;
+        display: block;
+        left: 0;
+        margin: 0;
+        padding: 2rem;
+        position: fixed !important;
+        top: 0;
+        width: fit-content;
+        z-index: 1;
+    }
+    #top .topnav {
+        margin: 2rem 0 0 0;
+    }
+    #top .topnav a {
+        color: white;
+    }
+    body:not([class="home"]) header {
+        animation-delay: 0s;
+    }
+    body:not([class="home"]) header .topnav, body:not([class="home"]) header img {
+        animation: fadeIn 0.5s;
+        animation-delay: 0.6s;
+        animation-fill-mode: forwards;
+        opacity: 0;
     }
 }
