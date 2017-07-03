@@ -485,6 +485,7 @@ main .work {
     text-decoration: none;
 }
 .socialmedia svg {
+    background-color: white;
     padding: 6px;
     padding: 0.4rem;
     width: 48px;
@@ -517,6 +518,10 @@ main .work {
     fill: none;
     stroke: white;
 }
+/*.socialmedia svg, .socialmedia svg * {
+    transition: fill 0.2s ease;
+    transition: stroke 0.2s ease;
+}*/
 
 /* DETAIL PAGE*/
 .detail p, .detail h2, .detail h3 {
@@ -625,6 +630,9 @@ main .work {
         font-size: 23px;
         font-size: 1.4rem;
     }
+    .resume svg {
+        padding: 0.5rem;
+    }
     .home .topnav li {
         width: 6rem;
     }
@@ -708,13 +716,17 @@ main .work {
     .resume {
         padding-bottom: 6rem;
     }
-    .personally {
+    .contact {
+        min-height: 0;
+        height: 35rem;
+    }
+    .personally, .contact {
         margin-top: 4rem;
     }
-    .personally, .visualdesign, .frontender, .skills, .resume {
+    .personally, .visualdesign, .frontender, .skills, .resume, .contact {
         max-width: 70rem;
     }
-    .personally, .visualdesign, .frontender {
+    .personally, .visualdesign, .frontender, .contact {
         display: flex;
         flex-wrap: wrap;
     }
@@ -724,19 +736,23 @@ main .work {
     .frontender img {
         order: 1;
     }
+    .skills h2 {
+        padding-bottom: 2.5rem;
+        text-align: right;
+    }
     .skills img {
         height: 4rem;
         width: 4rem;
     }
-    .personally p:first-of-type, .frontender p, .frontender h2  {
+    .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type  {
         box-sizing: border-box;
         padding-right: 1rem;
     }
-    .personally p:last-of-type, .visualdesign p, .visualdesign h2  {
+    .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type {
         box-sizing: border-box;
         padding-left: 1rem;
     }
-    .personally > *, .visualdesign > *, .frontender > * {
+    .personally > *, .visualdesign > *, .frontender > *, .contact div {
         width: 50%;
     }
     .personally > h2, .personally > blockquote {
@@ -785,5 +801,14 @@ main .work {
     .home blockquote {
         font-size: 6rem;
         max-width: 100rem;
+    }
+    .home h1 {
+        font-size: 2.5rem;
+    }
+    .home h2 {
+        font-size: 1.1rem;
+    }
+    .home .intro img {
+        width: 3rem;
     }
 }
