@@ -269,7 +269,7 @@ div.intro h1 {
     content: '';
     height: 2rem;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.4;
     position: absolute;
     right: 0;
     top: 0;
@@ -724,6 +724,10 @@ main .work {
     .frontender img {
         order: 1;
     }
+    .skills img {
+        height: 4rem;
+        width: 4rem;
+    }
     .personally p:first-of-type, .frontender p, .frontender h2  {
         box-sizing: border-box;
         padding-right: 1rem;
@@ -744,10 +748,16 @@ main .work {
     .intro {
         width: auto;
     }
-    .home header img {
-        animation: fadeIn 0.5s;
-        display: block;
-        width: 3rem;
+    .home blockquote {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        max-width: 80rem;
+    }
+    .skills img {
+        height: 6rem;
+        width: 6rem;
     }
     #top {
         left: 0;
@@ -760,9 +770,6 @@ main .work {
     #top .topnav {
         margin: 2rem 0 0 0;
     }
-    #top .topnav a {
-        color: white;
-    }
     body:not([class="home"]) header {
         animation-delay: 0s;
     }
@@ -771,5 +778,12 @@ main .work {
         animation-delay: 0.6s;
         animation-fill-mode: forwards;
         opacity: 0;
+    }
+}
+
+@media screen and (min-width: 81rem){
+    .home blockquote {
+        font-size: 6rem;
+        max-width: 100rem;
     }
 }
