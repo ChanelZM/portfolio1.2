@@ -746,16 +746,21 @@ main .work {
     }
     .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type  {
         box-sizing: border-box;
+        padding-left: 1rem;
         padding-right: 1rem;
     }
     .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type {
         box-sizing: border-box;
         padding-left: 1rem;
+        padding-right: 1rem;
     }
     .personally > *, .visualdesign > *, .frontender > *, .contact div {
         width: 50%;
     }
     .personally > h2, .personally > blockquote {
+        box-sizing: border-box;
+        padding-left: 1rem;
+        padding-right: 1rem;
         width: 100%;
     }
 }
@@ -810,5 +815,11 @@ main .work {
     }
     .home .intro img {
         width: 3rem;
+    }
+    .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type  {
+        padding-left: 0;
+    }
+    .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type {
+        padding-right: 0;
     }
 }
