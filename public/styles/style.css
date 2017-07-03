@@ -109,8 +109,8 @@ p {
 blockquote {
     color: #E3003A;
     font-family: Lobster, cursive;
-    font-size: 32px;
-    font-size: 2rem;
+    font-size: 29px;
+    font-size: 1.8rem;
     text-align: center;
 }
 blockquote::before, blockquote::after {
@@ -374,7 +374,8 @@ div.intro h1 {
     height: 6rem;
     margin-bottom: 2rem;
     opacity: 0.8;
-    transition: filter 0.4s ease;
+    transition: filter 0.2s ease;
+    animation-delay: 0.2s;
     width: 6rem;
 }
 
@@ -555,6 +556,10 @@ main .work {
         line-height: 32px;
         line-height: 2rem;
     }
+    blockquote {
+        font-size: 32px;
+        font-size: 2rem;
+    }
     .hatepage {
         background: url('../img/small-trump.jpg') no-repeat;
     }
@@ -583,6 +588,9 @@ main .work {
 }
 
 @media screen and (min-width: 31rem){
+    blockquote {
+        font-size: 2.4rem;
+    }
     a {
         font-size: 1.2rem;
     }
@@ -690,10 +698,49 @@ main .work {
     }
 }
 
-@media screen and (min-width: 71rem){
-    main {
-        margin-left: 9.8rem;
+@media screen and (min-width: 51rem) {
+    blockquote {
+        font-size: 4rem;
     }
+    .intro {
+        height: 30rem;
+    }
+    .resume {
+        padding-bottom: 6rem;
+    }
+    .personally {
+        margin-top: 4rem;
+    }
+    .personally, .visualdesign, .frontender, .skills, .resume {
+        max-width: 70rem;
+    }
+    .personally, .visualdesign, .frontender {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .about section:not(:last-of-type) {
+        margin-bottom: 6rem;
+    }
+    .frontender img {
+        order: 1;
+    }
+    .personally p:first-of-type, .frontender p, .frontender h2  {
+        box-sizing: border-box;
+        padding-right: 1rem;
+    }
+    .personally p:last-of-type, .visualdesign p, .visualdesign h2  {
+        box-sizing: border-box;
+        padding-left: 1rem;
+    }
+    .personally > *, .visualdesign > *, .frontender > * {
+        width: 50%;
+    }
+    .personally > h2, .personally > blockquote {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 71rem){
     .intro {
         width: auto;
     }
@@ -703,15 +750,11 @@ main .work {
         width: 3rem;
     }
     #top {
-        background-color: #E3003A;
-        bottom: 0;
-        display: block;
         left: 0;
         margin: 0;
         padding: 2rem;
-        position: fixed !important;
+        right: 0;
         top: 0;
-        width: fit-content;
         z-index: 1;
     }
     #top .topnav {
