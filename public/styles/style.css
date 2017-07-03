@@ -474,6 +474,9 @@ main .work {
     min-height: 100vh;
     width: 100vw;
 }
+.contactpage a[href="#top"] {
+    display: none;
+}
 .socialmedia {
     padding-bottom: 3rem;
 }
@@ -614,12 +617,12 @@ main .work {
     main > section:first-of-type h2 {
         margin-top: 1.5rem;
     }
-    .socialmedia, .email {
+    .socialmedia, .email, footer {
         margin-left: auto;
         margin-right: auto;
         margin-top: 1.5rem;
     }
-    .personally, .visualdesign, .frontender, .resume, .contact, .email, .socialmedia, .skills {
+    .personally, .visualdesign, .frontender, .resume, .contact, .email, .socialmedia, .skills, footer {
         max-width: 35rem;
     }
     .home h1 {
@@ -710,11 +713,14 @@ main .work {
     blockquote {
         font-size: 4rem;
     }
+    footer p {
+        font-size: 1.2rem;
+    }
     .intro {
         height: 30rem;
     }
     .resume {
-        padding-bottom: 6rem;
+        padding-bottom: 12rem;
     }
     .contact {
         min-height: 0;
@@ -723,7 +729,7 @@ main .work {
     .personally, .contact {
         margin-top: 4rem;
     }
-    .personally, .visualdesign, .frontender, .skills, .resume, .contact {
+    .personally, .visualdesign, .frontender, .skills, .resume, .contact, footer {
         max-width: 70rem;
     }
     .personally, .visualdesign, .frontender, .contact {
@@ -744,12 +750,7 @@ main .work {
         height: 4rem;
         width: 4rem;
     }
-    .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type  {
-        box-sizing: border-box;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type {
+    .personally p, .visualdesign p, .visualdesign h2, .contact div, .frontender p, .frontender h2, .skills, .resume {
         box-sizing: border-box;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -816,10 +817,10 @@ main .work {
     .home .intro img {
         width: 3rem;
     }
-    .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type  {
+    .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type, .skills, .resume  {
         padding-left: 0;
     }
-    .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type {
+    .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type, .skills, .resume {
         padding-right: 0;
     }
 }
