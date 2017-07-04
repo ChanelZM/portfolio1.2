@@ -816,7 +816,7 @@ main .work {
             display: grid;
             grid-template-columns: [line1] 23rem [line2] 23rem [line3] 23rem [line4];
             grid-template-rows: [row1] 11.5rem [row2] 11.5rem [row3] 11.5rem [row4] 11.5rem [row5];
-            grid-gap: 1rem 1rem;
+            grid-gap: 0.5rem 0.5rem;
         }
         .work-container .work {
             height: 100%;
@@ -825,15 +825,16 @@ main .work {
         }
         .work-container section:nth-of-type(1){
             background: url('../img/big-trump.jpg') no-repeat;
-            background-size: 47rem auto;
+            background-size: 46.5rem auto;
             grid-column: line1 / span line3;
             grid-row: row1 / span row3;
         }
         .work-container section:nth-of-type(2){
             background: url('../img/big-vn.png') no-repeat;
-            background-size: 47rem auto;
+            background-size: 46.5rem auto;
             grid-column: line2 / span line5;
             grid-row: row3 / span row5;
+            width: 46.5rem;
         }
         .work-container section:nth-of-type(3){
             grid-column: line3 / span line4;
@@ -850,6 +851,18 @@ main .work {
         .work-container section:nth-of-type(6){
             grid-column: line1 / span line2;
             grid-row: row4 / span row5;
+        }
+        .work-container section div {
+            padding-top: 3rem;
+        }
+        .work-container section a {
+            font-size: 2rem;
+        }
+        .work-container section:nth-of-type(1) a, .work-container section:nth-of-type(2) a {
+            font-size: 3rem;
+        }
+        .work-container section:nth-of-type(1) div, .work-container section:nth-of-type(2) div {
+            padding-top: 8rem;
         }
     }
     .home blockquote {
