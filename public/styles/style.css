@@ -490,6 +490,7 @@ main .work {
     padding-bottom: 3rem;
 }
 .role {
+    box-sizing: border-box;
     width: 100%;
     color: #8A8484;
 }
@@ -539,7 +540,7 @@ main .work {
 /* DETAIL PAGE*/
 .content {
     margin-top: 1rem;
-    padding-bottom: 4rem;
+    padding: 0 0 4rem 0;
 }
 .detail p, .detail h2, .detail h3 {
     padding: 0 8px;
@@ -550,7 +551,9 @@ main .work {
     width: 100%;
 }
 .content blockquote {
-    margin: 1rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
     text-align: left;
     width: 100%;
 }
@@ -677,7 +680,7 @@ main .work {
         width: 6rem;
     }
     body:not([class="home"]) .intro h1 {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
     }
     .topnav li {
         font-size: 1.2rem;
@@ -779,6 +782,9 @@ main .work {
         margin-left: auto;
         margin-right: auto;
     }
+    .content {
+        padding-bottom: 10rem;
+    }
     .contact {
         min-height: 0;
         height: 35rem;
@@ -812,12 +818,16 @@ main .work {
         width: 4rem;
     }
     .content blockquote {
+        font-size: 3.2rem;
         text-align: center;
     }
     .personally p, .visualdesign p, .visualdesign h2, .contact div, .frontender p, .frontender h2, .skills, .resume {
         box-sizing: border-box;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    .content blockquote {
+        margin-top: 6rem;
     }
     .content > section:last-of-type {
         display: flex;
@@ -828,7 +838,7 @@ main .work {
         width: 100%;
     }
     .content > section:last-of-type section {
-        margin: 2rem 0;
+        margin: 6rem 0 0 0;
         width: 50%;
     }
     .personally > *, .visualdesign > *, .frontender > *, .contact div {
@@ -845,6 +855,12 @@ main .work {
 @media screen and (min-width: 60rem) {
     .work div {
         padding-top: 5rem;
+    }
+    body:not([class="home"]) .intro h1 {
+        font-size: 4.5rem;
+    }
+    .detail .intro p {
+        font-size: 1.3rem;
     }
 }
 
@@ -917,6 +933,9 @@ main .work {
         height: 6rem;
         width: 6rem;
     }
+    .content blockquote {
+        font-size: 3.5rem;
+    }
     .work-container section {
         background-size: 35rem;
         height: 17.5rem;
@@ -933,9 +952,6 @@ main .work {
         top: 0;
         z-index: 1;
     }
-    #top .topnav {
-        margin: 2rem 0 0 0;
-    }
     body:not([class="home"]) header {
         animation-delay: 0s;
     }
@@ -948,6 +964,9 @@ main .work {
 }
 
 @media screen and (min-width: 81rem){
+    a.view {
+        font-size: 1.5rem;
+    }
     .home blockquote {
         font-size: 6rem;
         max-width: 100rem;
