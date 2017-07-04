@@ -26,4 +26,11 @@ router.get('/hatepage', function(req, res){
     res.render('content/trumphatepage');
 });
 
+router.get('/vrijnederland', function(req, res){
+    res.render('content/error', {
+        error: 'Coming soon',
+        meta: 'This project isn\'t done yet!'
+    });
+});
+
 module.exports = router;

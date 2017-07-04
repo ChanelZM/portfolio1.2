@@ -392,6 +392,12 @@ div.intro h1 {
 .works {
     padding-bottom: 3rem;
 }
+.work-container {
+    display: block;
+}
+.vn {
+    background: url('../img/xsmall-vn.png') no-repeat;
+}
 .data45 {
     background: url('../img/xsmall-ooster.jpg') no-repeat;
 }
@@ -426,12 +432,15 @@ main .work {
     text-align: center;
     transition: background-color 0.5s;
 }
+.work h2 {
+    text-shadow: 1px 1px 14px #515050;
+}
 .work p {
     background-color: #E3003A;
     color: white;
     display: none;
     margin: 0;
-    padding: 0.2rem 0.2rem 0 0.2rem;
+    padding: 0.2rem 0.2rem 0 0.4rem;
 }
 .resume svg {
     float: left;
@@ -571,6 +580,9 @@ main .work {
     .hatepage {
         background: url('../img/small-trump.jpg') no-repeat;
     }
+    .vn {
+        background: url('../img/small-vn.png') no-repeat;
+    }
     .data45 {
         background: url('../img/small-ooster.jpg') no-repeat;
     }
@@ -614,7 +626,7 @@ main .work {
     section h3 {
         font-size: 1.8rem;
     }
-    main > section:first-of-type h2 {
+    main > section h2 {
         margin-top: 1.5rem;
     }
     .socialmedia, .email, footer {
@@ -622,7 +634,7 @@ main .work {
         margin-right: auto;
         margin-top: 1.5rem;
     }
-    .personally, .visualdesign, .frontender, .resume, .contact, .email, .socialmedia, .skills, footer {
+    .personally, .visualdesign, .frontender, .resume, .contact, .email, .socialmedia, .skills, footer, .error {
         max-width: 35rem;
     }
     .home h1 {
@@ -651,6 +663,9 @@ main .work {
     .hatepage {
         background: url('../img/medium-trump.jpg') no-repeat;
     }
+    .vn {
+        background: url('../img/medium-vn.png') no-repeat;
+    }
     .data45 {
         background: url('../img/medium-ooster.jpg') no-repeat;
     }
@@ -665,6 +680,11 @@ main .work {
     }
     .home {
         height: 100vh;
+    }
+    .work-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
     .home blockquote {
         display: block;
@@ -686,11 +706,19 @@ main .work {
         font-size: 0.9rem;
         order: 4;
     }
+    .work div {
+        padding-top: 3.5rem;
+    }
     .topnav li {
         font-size: 1.5rem;
     }
     .home header a {
         color: #333;
+    }
+    .work-container section {
+        background-size: 50vw;
+        height: 25vw;
+        width: 50vw;
     }
     .home .intro {
         min-height: 100vh;
@@ -722,6 +750,10 @@ main .work {
     .resume {
         padding-bottom: 12rem;
     }
+    .work-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
     .contact {
         min-height: 0;
         height: 35rem;
@@ -729,12 +761,15 @@ main .work {
     .personally, .contact {
         margin-top: 4rem;
     }
-    .personally, .visualdesign, .frontender, .skills, .resume, .contact, footer {
+    .personally, .visualdesign, .frontender, .skills, .resume, .contact, footer, .work-container {
         max-width: 70rem;
     }
     .personally, .visualdesign, .frontender, .contact {
         display: flex;
         flex-wrap: wrap;
+    }
+    .work-container section {
+        width: 50%;
     }
     .about section:not(:last-of-type) {
         margin-bottom: 6rem;
@@ -766,9 +801,56 @@ main .work {
     }
 }
 
+@media screen and (min-width: 60rem) {
+    .work div {
+        padding-top: 5rem;
+    }
+}
+
 @media screen and (min-width: 71rem){
-    .intro {
-        width: auto;
+    .work-container {
+        padding: 2rem 0;
+    }
+    @supports(display:grid){
+        .work-container {
+            display: grid;
+            grid-template-columns: [line1] 23rem [line2] 23rem [line3] 23rem [line4];
+            grid-template-rows: [row1] 11.5rem [row2] 11.5rem [row3] 11.5rem [row4] 11.5rem [row5];
+            grid-gap: 1rem 1rem;
+        }
+        .work-container .work {
+            height: 100%;
+            width: 100%;
+            justify-self: stretch !important;
+        }
+        .work-container section:nth-of-type(1){
+            background: url('../img/big-trump.jpg') no-repeat;
+            background-size: 47rem auto;
+            grid-column: line1 / span line3;
+            grid-row: row1 / span row3;
+        }
+        .work-container section:nth-of-type(2){
+            background: url('../img/big-vn.png') no-repeat;
+            background-size: 47rem auto;
+            grid-column: line2 / span line5;
+            grid-row: row3 / span row5;
+        }
+        .work-container section:nth-of-type(3){
+            grid-column: line3 / span line4;
+            grid-row: row1 / span row2;
+        }
+        .work-container section:nth-of-type(4){
+            grid-column: line3 / span line4;
+            grid-row: row2 / span row3;
+        }
+        .work-container section:nth-of-type(5){
+            grid-column: line1 / span line2;
+            grid-row: row3 / span row4;
+        }
+        .work-container section:nth-of-type(6){
+            grid-column: line1 / span line2;
+            grid-row: row4 / span row5;
+        }
     }
     .home blockquote {
         margin-left: auto;
@@ -780,6 +862,14 @@ main .work {
     .skills img {
         height: 6rem;
         width: 6rem;
+    }
+    .work-container section {
+        background-size: 35rem;
+        height: 17.5rem;
+        width: 35rem;
+    }
+    .work div {
+        padding-top: 5.5rem;
     }
     #top {
         left: 0;
