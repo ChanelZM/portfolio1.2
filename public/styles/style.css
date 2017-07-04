@@ -490,6 +490,7 @@ main .work {
     padding-bottom: 3rem;
 }
 .role {
+    width: 100%;
     color: #8A8484;
 }
 .socialmedia a {
@@ -536,9 +537,26 @@ main .work {
 }*/
 
 /* DETAIL PAGE*/
+.content {
+    margin-top: 1rem;
+    padding-bottom: 4rem;
+}
 .detail p, .detail h2, .detail h3 {
     padding: 0 8px;
     padding: 0 0.5rem;
+}
+.content img {
+    height: 100%;
+    width: 100%;
+}
+.content blockquote {
+    margin: 1rem;
+    text-align: left;
+    width: 100%;
+}
+.content blockquote::before, .content blockquote::after {
+    height: 3rem;
+    font-size: 3rem;
 }
 .detail .intro {
     background-color: #13818A;
@@ -634,7 +652,7 @@ main .work {
         margin-right: auto;
         margin-top: 1.5rem;
     }
-    .personally, .visualdesign, .frontender, .resume, .contact, .email, .socialmedia, .skills, footer, .error {
+    .personally, .visualdesign, .frontender, .resume, .contact, .email, .socialmedia, .skills, footer, .error, .content {
         max-width: 35rem;
     }
     .home h1 {
@@ -647,6 +665,13 @@ main .work {
     }
     .resume svg {
         padding: 0.5rem;
+    }
+    .content blockquote {
+        font-size: 2rem;
+    }
+    .content blockquote::before, .content blockquote::after {
+        height: 4rem;
+        font-size: 4rem;
     }
     .home .topnav li {
         width: 6rem;
@@ -761,14 +786,15 @@ main .work {
     .personally, .contact {
         margin-top: 4rem;
     }
-    .personally, .visualdesign, .frontender, .skills, .resume, .contact, footer, .work-container {
+    .personally, .visualdesign, .frontender, .skills, .resume, .contact, footer, .work-container, .content {
         max-width: 70rem;
     }
-    .personally, .visualdesign, .frontender, .contact {
+    .personally, .visualdesign, .frontender, .contact, .content {
         display: flex;
         flex-wrap: wrap;
     }
-    .work-container section {
+    .work-container section, .content section {
+        box-sizing: border-box;
         width: 50%;
     }
     .about section:not(:last-of-type) {
@@ -785,10 +811,25 @@ main .work {
         height: 4rem;
         width: 4rem;
     }
+    .content blockquote {
+        text-align: center;
+    }
     .personally p, .visualdesign p, .visualdesign h2, .contact div, .frontender p, .frontender h2, .skills, .resume {
         box-sizing: border-box;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    .content > section:last-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .content > section:last-of-type > h2, .content > section:last-of-type > p {
+        width: 100%;
+    }
+    .content > section:last-of-type section {
+        margin: 2rem 0;
+        width: 50%;
     }
     .personally > *, .visualdesign > *, .frontender > *, .contact div {
         width: 50%;
