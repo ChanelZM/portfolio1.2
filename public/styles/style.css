@@ -109,9 +109,8 @@ p {
 blockquote {
     color: #E3003A;
     font-family: Lobster, cursive;
-    font-size: 29px;
-    font-size: 1.8rem;
-    text-align: center;
+    font-size: 36px;
+    font-size: 2.2rem;
 }
 blockquote::before, blockquote::after {
     color: #8A8484;
@@ -179,6 +178,10 @@ nav ul li {
     padding: 0.5rem;
     position: relative;
 }
+.home nav li {
+    padding: 0.5rem 0;
+    width: 5rem;
+}
 nav a, nav a:visited {
     color: white;
     text-decoration: none;
@@ -199,6 +202,7 @@ main > section {
     padding: 0 0.5rem;
 }
 .intro {
+    box-shadow: 0px 2px 15px grey;
     background-color: #E3003A;
     color: white;
     height: 100vh;
@@ -316,9 +320,6 @@ div.intro h1 {
 .home .intro {
     background-color: white;
     color: #E3003A;
-}
-.home .topnav  li {
-    position: relative;
 }
 .home .topnav  li:hover::before {
     background: url('../img/logo.svg') no-repeat;
@@ -698,6 +699,9 @@ main .work {
 }
 
 @media screen and (min-width: 40rem){
+    blockquote {
+        text-align: center;
+    }
     .hatepage {
         background: url('../img/medium-trump.jpg') no-repeat;
     }
@@ -770,9 +774,6 @@ main .work {
         width: 37px;
         width: 2.3rem;
     }
-    .home .topnav li {
-        width: 6rem;
-    }
 }
 
 @media screen and (min-width: 51rem) {
@@ -784,6 +785,11 @@ main .work {
     }
     .intro {
         height: 30rem;
+    }
+    .skills, .resume {
+        box-sizing: border-box;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     .resume {
         padding-bottom: 12rem;
@@ -831,7 +837,7 @@ main .work {
         font-size: 3.2rem;
         text-align: center;
     }
-    .personally p, .visualdesign p, .visualdesign h2, .contact div, .frontender p, .frontender h2, .skills, .resume {
+    .personally p, .visualdesign p, .visualdesign h2, .contact div, .frontender p, .frontender h2 {
         box-sizing: border-box;
         padding-left: 1rem;
         padding-right: 1rem;

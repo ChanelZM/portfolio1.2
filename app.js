@@ -16,7 +16,10 @@ app.use('/about', aboutRouter);
 app.use('/work', workRouter);
 app.use('/contact', contactRouter);
 app.use('/*', function(req, res){
-    res.send('Oops.. page not found');
+    res.render('content/error', {
+        error: 'Page not found',
+        meta: 'The page you requested doesn\'t exist!'
+    });
 });
 
 app.listen(process.env.PORT || 4000, function () {
