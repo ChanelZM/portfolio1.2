@@ -208,7 +208,6 @@ main > section {
     height: 100vh;
     padding: 0;
     position: relative;
-    width: 100vw;
 }
 .scrollanim {
     animation: jump 2s linear infinite;
