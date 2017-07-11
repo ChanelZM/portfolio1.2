@@ -208,6 +208,18 @@ main > section {
     padding: 0;
     position: relative;
 }
+.intro::before {
+    background: url('../img/small-banner.svg') fixed;
+    background-position: center;
+    background-size: auto 100vh;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 .warning {
     margin: 0;
     color: #E3003A;
@@ -328,6 +340,9 @@ div.intro h1 {
 .home .intro {
     background-color: white;
     color: #E3003A;
+}
+.home .intro::before {
+    background: none;
 }
 .home .topnav  li:hover::before {
     background: url('../img/logo.svg') no-repeat;
@@ -793,6 +808,11 @@ main .work {
     }
     .intro {
         height: 30rem;
+    }
+    .intro::before {
+        background: url('../img/banner.svg') fixed;
+        background-size: auto 30rem;
+        background-position: center top;
     }
     .skills, .resume {
         box-sizing: border-box;
