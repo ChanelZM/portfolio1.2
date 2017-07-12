@@ -18,7 +18,8 @@ app.use('/contact', contactRouter);
 app.use('/*', function(req, res){
     res.render('content/error', {
         error: 'Page not found',
-        meta: 'The page you requested doesn\'t exist!'
+        meta: 'The page you requested doesn\'t exist!',
+        href: 'undefined'
     });
 });
 

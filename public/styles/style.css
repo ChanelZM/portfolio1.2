@@ -100,6 +100,11 @@ a:hover {
     color: #19A3A6;
     cursor: pointer;
 }
+/*a:focus {
+    background-color: #13818A;
+    color: white;
+    outline: none;
+}*/
 p {
     font-size: 19px;
     font-size: 1.2rem;
@@ -107,7 +112,7 @@ p {
     line-height: 1.8rem;
 }
 blockquote {
-    color: #E3003A;
+    color: #13818A;
     font-family: Lobster, cursive;
     font-size: 36px;
     font-size: 2.2rem;
@@ -160,6 +165,11 @@ header img {
     padding-top: 0.5rem;
     width: 48px;
     width: 2rem;
+    transform: scale(1, 1);
+    transition: transform 0.2s ease;
+}
+header img:hover {
+    transform: scale(1.2, 1.2);
 }
 h2 span {
     color: #E3003A;
@@ -235,6 +245,9 @@ main > section {
     right: 0;
     text-align: center;
 }
+.active {
+    border: 2px dashed white;
+}
 .scrollanim img {
     width: 32px;
     width: 2rem;
@@ -297,17 +310,12 @@ div.intro h1 {
 .detail .intro{
     box-shadow: 0px -16px 37px -11px #555 inset;
 }
-.topnav  li:hover::before {
-    background: url('../img/logo-white.svg') no-repeat;
-    background-position: center;
-    bottom: 0;
-    content: '';
-    height: 2rem;
-    left: 0;
-    opacity: 0.4;
-    position: absolute;
-    right: 0;
-    top: 0;
+.topnav li {
+    transform: scale(1, 1);
+    transition: transform 0.2s ease;
+}
+.topnav li:hover {
+    transform: scale(1.1, 1.1);
 }
 
 /* HOME */
@@ -409,10 +417,8 @@ div.intro h1 {
     width: 100%;
 }
 .skills img {
-    /*filter: grayscale(100%);*/
     height: 6rem;
     margin-bottom: 2rem;
-    /*opacity: 0.8;*/
     transition: filter 0.2s ease;
     animation-delay: 0.2s;
     width: 6rem;
@@ -481,22 +487,6 @@ main .work {
     margin: 0;
     padding: 0.2rem 0.2rem 0 0.4rem;
 }
-.resume svg {
-    float: left;
-    margin: 1rem 0.5rem 0 0;
-}
-.resume svg:hover #Rectangle-78, .resume svg:hover #Line-Copy, .resume svg:hover #Line-Copy-3, .resume svg:hover #Line-Copy-4, .resume svg:hover #Line-Copy-2, .resume svg:hover #Oval-1-Copy, .resume svg:hover #Oval-1, .resume svg:hover #Line-Copy-5 {
-    stroke: #E3003A;
-}
-.resume svg:hover #Fill-2-Copy-2 {
-    fill: white;
-}
-.resume svg:hover #Stroke-1-Copy {
-    stroke: white;
-}
-.resume svg:hover {
-    background-color: #E3003A;
-}
 .work div:hover {
     background-color: rgba(25, 163, 166, 0.9);
 }
@@ -535,7 +525,7 @@ main .work {
 }
 .socialmedia a {
     display: inline-block;
-    padding-right: 1rem;
+    margin-right: 1rem;
     text-decoration: none;
 }
 .socialmedia img {
@@ -731,6 +721,7 @@ main .work {
         justify-content: flex-start;
     }
     .home blockquote {
+        color: #E3003A;
         display: block;
         font-size: 4rem;
         margin: 2rem 2rem 2rem 2rem;
@@ -878,6 +869,9 @@ main .work {
 @media screen and (min-width: 60rem) {
     .resume img {
         width: 5rem;
+    }
+    .resume p {
+        padding-left: 5.5rem;
     }
     .work div {
         padding-top: 5rem;
