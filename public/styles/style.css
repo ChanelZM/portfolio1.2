@@ -100,11 +100,11 @@ a:hover {
     color: #19A3A6;
     cursor: pointer;
 }
-/*a:focus {
-    background-color: #13818A;
-    color: white;
-    outline: none;
-}*/
+a:focus {
+    background-color: #7C3A4A;
+    color: white !important;
+    outline: 5px solid #7C3A4A;
+}
 p {
     font-size: 19px;
     font-size: 1.2rem;
@@ -181,6 +181,10 @@ nav ul {
     text-transform: uppercase;
     letter-spacing: 2px;
     letter-spacing: 0.15rem;
+}
+header > a:focus {
+    background-color: #7C3A4A;
+    outline: 5px solid #7C3A4A;
 }
 nav ul li {
     display: inline-block;
@@ -317,6 +321,10 @@ div.intro h1 {
 .topnav li:hover {
     transform: scale(1.1, 1.1);
 }
+.topnav a:focus {
+    background-color: #7C3A4A;
+    outline: 1rem solid #7C3A4A;
+}
 
 /* HOME */
 .home header {
@@ -343,7 +351,7 @@ div.intro h1 {
     letter-spacing: 0.25rem;
     text-transform: uppercase;
 }
-.home footer, .home header img  {
+.home footer, .home header > a  {
     display: none;
 }
 .home .intro {
@@ -394,6 +402,8 @@ div.intro h1 {
 
 /* ABOUT */
 .resume {
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 48px;
     padding-bottom: 3rem;
 }
@@ -402,13 +412,25 @@ div.intro h1 {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.resume img {
-    float: left;
-    margin-top: 1rem;
-    width: 4rem;
+.resume h2 {
+    width: 100%;
 }
 .resume p {
-    padding-left: 4.5rem;
+    padding-left: 0.5rem;
+    width: 75%;
+}
+.resume a{
+    margin-top: 1rem;
+}
+.resume a:focus, .socialmedia a:focus {
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 6px 6px 0px rgba(124,58,74, 1), -6px -6px 0px rgba(124,58,74, 1), -6px 6px 0px rgba(124,58,74, 1), 6px -6px 0px rgba(124,58,74, 1);
+    outline: none;
+}
+.resume img {
+    float: left;
+    width: 4rem;
 }
 .personally blockquote {
     margin: 0;
@@ -494,6 +516,12 @@ main .work {
     color: white;
     text-decoration: none;
 }
+.work a:focus {
+    background-color: #7C3A4A;
+    outline: none;
+    padding: 0.5rem;
+    text-shadow: none;
+}
 .work a::after {
     bottom: 0;
     content: '';
@@ -525,6 +553,7 @@ main .work {
 }
 .socialmedia a {
     display: inline-block;
+    height: 3rem;
     margin-right: 1rem;
     text-decoration: none;
 }
@@ -534,7 +563,6 @@ main .work {
 .socialmedia img, .resume img {
     transform: scale(1, 1);
     transition: transform 0.2s ease;
-    width: 3rem;
 }
 .socialmedia img:hover, .resume img:hover {
     transform: scale(1.2, 1.2);
@@ -669,8 +697,8 @@ main .work {
         font-size: 23px;
         font-size: 1.4rem;
     }
-    .resume svg {
-        padding: 0.5rem;
+    .resume p {
+        width: 85%;
     }
     .content blockquote {
         font-size: 2rem;
@@ -828,8 +856,8 @@ main .work {
         text-align: right;
     }
     .skills img {
-        height: 4rem;
-        width: 4rem;
+        height: 5rem;
+        width: 5rem;
     }
     .content blockquote {
         font-size: 3.2rem;
@@ -869,9 +897,6 @@ main .work {
 @media screen and (min-width: 60rem) {
     .resume img {
         width: 5rem;
-    }
-    .resume p {
-        padding-left: 5.5rem;
     }
     .work div {
         padding-top: 5rem;
