@@ -376,28 +376,28 @@ div.intro h1 {
 @supports(animation: fadeIn){
     .home .intro div {
         animation: fadeIn ease-in;
-        animation-duration: 0.5s;
+        animation-duration: 0.4s;
         animation-fill-mode: forwards;
         opacity: 0;
     }
     .home .topnav  li:nth-of-type(1) {
         animation: fadeIn ease-in;
-        animation-delay: 1s;
-        animation-duration: 0.5s;
+        animation-delay: 0.6s;
+        animation-duration: 0.4s;
         animation-fill-mode: forwards;
         opacity: 0;
     }
     .home .topnav  li:nth-of-type(2) {
         animation: fadeIn ease-in;
-        animation-delay: 2s;
-        animation-duration: 0.5s;
+        animation-delay: 1.2s;
+        animation-duration: 0.4s;
         animation-fill-mode: forwards;
         opacity: 0;
     }
     .home .topnav  li:nth-of-type(3) {
         animation: fadeIn ease-in;
-        animation-delay: 3s;
-        animation-duration: 0.5s;
+        animation-delay: 1.8s;
+        animation-duration: 0.4s;
         animation-fill-mode: forwards;
         opacity: 0;
     }
