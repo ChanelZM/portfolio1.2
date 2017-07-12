@@ -469,6 +469,9 @@ div.intro h1 {
 .work-container {
     display: block;
 }
+.video {
+    margin-bottom: 1.2rem;
+}
 .vn {
     background: url('../img/xsmall-vn.png') no-repeat;
 }
@@ -524,7 +527,7 @@ main .work {
     text-decoration: none;
 }
 .work a:focus {
-    background-color: #7C3A4A;
+    background-color: #E3003A;
     outline: none;
     padding: 0.5rem;
     text-shadow: none;
