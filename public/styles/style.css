@@ -549,44 +549,6 @@ main .work {
 .socialmedia img:hover, .resume img:hover {
     transform: scale(1.2, 1.2);
 }
-/*.socialmedia svg {
-    background-color: white;
-    padding: 6px;
-    padding: 0.4rem;
-    width: 48px;
-    width: 3rem;
-}
-.socialmedia svg:hover {
-    background-color: #E3003A;
-}
-.socialmedia svg:hover .st0 {
-    stroke: white;
-}
-.socialmedia svg:hover .st1 {
-    stroke: white;
-    fill: white;
-}
-.socialmedia svg:hover .st2 {
-    fill: #E3003A;
-}
-.socialmedia a[href="https://github.com/ChanelZM"] svg .st0 {
-    fill: #13818A;
-}
-.socialmedia a[href="https://github.com/ChanelZM"] svg .st1 {
-    fill: none;
-    stroke: #13818A;
-}
-.socialmedia a[href="https://github.com/ChanelZM"] svg:hover .st0 {
-    fill: white;
-}
-.socialmedia a[href="https://github.com/ChanelZM"] svg:hover .st1 {
-    fill: none;
-    stroke: white;
-}*/
-/*.socialmedia svg, .socialmedia svg * {
-    transition: fill 0.2s ease;
-    transition: stroke 0.2s ease;
-}*/
 
 /* DETAIL PAGE*/
 .content {
@@ -1044,10 +1006,10 @@ main .work {
     .home .intro img {
         width: 3rem;
     }
-    .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type, .skills, .resume  {
+    .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type, .skills, .resume, .personally > h2 {
         padding-left: 0;
     }
-    .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type, .skills, .resume {
+    .personally p:last-of-type, .visualdesign p, .visualdesign h2, .contact div:last-of-type, .skills, .resume, .personally > h2 {
         padding-right: 0;
     }
 }
