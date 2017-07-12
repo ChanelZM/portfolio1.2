@@ -209,7 +209,8 @@ main > section {
     position: relative;
 }
 .intro::before {
-    background: url('../img/small-banner.svg') fixed;
+    background: url('../img/small-banner.svg');
+    background-attachment: fixed;
     background-position: center;
     background-size: auto 100vh;
     bottom: 0;
@@ -388,21 +389,25 @@ div.intro h1 {
     padding-bottom: 48px;
     padding-bottom: 3rem;
 }
-
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.resume img {
+    float: left;
+    margin-top: 1rem;
+    width: 4rem;
+}
+.resume p {
+    padding-left: 4.5rem;
+}
 .personally blockquote {
     margin: 0;
 }
-
 .skills h2 {
     width: 100%;
 }
-
 .skills img {
     /*filter: grayscale(100%);*/
     height: 6rem;
@@ -530,9 +535,21 @@ main .work {
 }
 .socialmedia a {
     display: inline-block;
+    padding-right: 1rem;
     text-decoration: none;
 }
-.socialmedia svg {
+.socialmedia img {
+    width: 3rem;
+}
+.socialmedia img, .resume img {
+    transform: scale(1, 1);
+    transition: transform 0.2s ease;
+    width: 3rem;
+}
+.socialmedia img:hover, .resume img:hover {
+    transform: scale(1.2, 1.2);
+}
+/*.socialmedia svg {
     background-color: white;
     padding: 6px;
     padding: 0.4rem;
@@ -565,7 +582,7 @@ main .work {
 .socialmedia a[href="https://github.com/ChanelZM"] svg:hover .st1 {
     fill: none;
     stroke: white;
-}
+}*/
 /*.socialmedia svg, .socialmedia svg * {
     transition: fill 0.2s ease;
     transition: stroke 0.2s ease;
@@ -897,6 +914,9 @@ main .work {
 }
 
 @media screen and (min-width: 60rem) {
+    .resume img {
+        width: 5rem;
+    }
     .work div {
         padding-top: 5rem;
     }
