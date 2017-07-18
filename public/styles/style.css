@@ -113,7 +113,7 @@ p {
 }
 blockquote {
     color: #13818A;
-    font-family: Lobster, cursive;
+    font-family: 'Lobster', cursive;
     font-size: 36px;
     font-size: 2.2rem;
 }
@@ -122,10 +122,10 @@ blockquote::before, blockquote::after {
     content: '"';
     display: block;
     font-family: 'Catamaran', serif;
-    height: 80px;
-    height: 5rem;
-    font-size: 80px;
-    font-size: 5rem;
+    height: 48px;
+    height: 3rem;
+    font-size: 48px;
+    font-size: 3rem;
 }
 iframe {
     box-sizing: border-box;
@@ -156,6 +156,8 @@ section footer {
     width: 100%;
 }
 footer p {
+    font-family: 'Lobster', cursive;
+    font-style: normal;
     font-size: 15px;
     font-size: 0.9rem;
     margin: 0;
@@ -198,10 +200,6 @@ nav ul li {
     opacity: 1;
     padding: 0.5rem;
     position: relative;
-}
-.home nav li {
-    padding: 0.5rem 0;
-    width: 5rem;
 }
 nav a, nav a:visited {
     color: white;
@@ -257,14 +255,11 @@ main > section {
     text-align: center;
 }
 .active {
-    border: 2px dashed white;
+    border: 2px solid white;
 }
 .scrollanim img {
     width: 32px;
     width: 2rem;
-}
-.intro blockquote {
-    display: none;
 }
 a.view {
     background-color: #E3003A;
@@ -311,9 +306,9 @@ div.intro h1 {
     position: absolute;
     left: 0;
     right: 0;
-    top: 50%;
+    top: 47%;
     text-align: center;
-    transform: translateY(-50%);
+    transform: translateY(-51%);
 }
 .about .intro, .works .intro, .contactpage .intro {
     box-shadow: 0px -16px 37px -11px #777 inset;
@@ -338,7 +333,10 @@ div.intro h1 {
     display: block;
     text-align: center;
 }
-.home header a {
+.home div {
+    margin: 1rem;
+}
+.home h1 {
     color: #E3003A;
 }
 .home  h1, .detail h1 {
@@ -350,6 +348,11 @@ div.intro h1 {
     margin: 3px 0;
     margin: 0.2rem 0;
 }
+.home img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .home  h2, .detail .intro p, .role {
     font-family: 'August', sans-serif;
     font-size: 16px;
@@ -358,20 +361,41 @@ div.intro h1 {
     letter-spacing: 0.25rem;
     text-transform: uppercase;
 }
+.home blockquote {
+    background-color: rgba(255,255,255,0.5);
+    border-bottom: 1px solid #4a4a4a;
+    border-top: 1px solid #4a4a4a;
+    color: #4a4a4a;
+    font-family: 'August', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: auto;
+    max-width: 25rem;
+    padding: 0.3rem;
+}
+.home blockquote::before, .home blockquote::after {
+    content: none;
+    height: 0rem;
+}
+.home header a {
+    color: #13818A;
+    font-family: 'August Bold', sans-serif;
+}
+.home nav li {
+    padding: 0.5rem 0;
+    width: 5rem;
+}
 .home footer, .home header > a  {
     display: none;
 }
 .home .intro {
-    background-color: white;
-    color: #E3003A;
-}
-.home .intro::before {
     background: none;
 }
-.home .topnav  li:hover::before {
-    background: url('../img/logo.svg') no-repeat;
+.home .intro::before {
+    background: url('../img/frontpage-sketch.svg');
+    background-size: auto 100%;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 @supports(animation: fadeIn){
     .home .intro div {
@@ -561,6 +585,10 @@ main .work {
     width: 100%;
     color: #8A8484;
 }
+.contact > img {
+    /*transform: translateY(-6rem);*/
+    width: 100%;
+}
 .socialmedia a {
     display: inline-block;
     height: 3rem;
@@ -707,6 +735,11 @@ main .work {
         font-size: 23px;
         font-size: 1.4rem;
     }
+    .home blockquote {
+        border-bottom: 2px solid #4a4a4a;
+        border-top: 2px solid #4a4a4a;
+        font-family: 'August Bold';
+    }
     .resume p {
         width: 85%;
     }
@@ -758,35 +791,19 @@ main .work {
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-    .home blockquote {
-        color: #E3003A;
-        display: block;
-        font-size: 4rem;
-        margin: 2rem 2rem 2rem 2rem;
-        order: 1;
-    }
-    .home div {
-        display: flex;
-        flex-direction: column;
-    }
     .home h1 {
-        filter: grayscale(100%);
-        font-size: 1.9rem;
-        opacity: 0.6;
-        order: 3;
+        font-size: 5rem;
     }
     .home h2 {
-        font-size: 0.9rem;
-        order: 4;
+        font-size: 1.7rem;
     }
-    .work div {
-        padding-top: 3.5rem;
+    .home blockquote {
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+        max-width: 33rem;
     }
     .topnav li {
         font-size: 1.5rem;
-    }
-    .home header a {
-        color: #333;
     }
     .work-container section {
         background-size: 50vw;
@@ -796,14 +813,14 @@ main .work {
     .home .intro {
         min-height: 100vh;
     }
+    .home header a {
+        font-size: 1.5rem;
+    }
+    .home .topnav li {
+        width: 7rem;
+    }
     .home .intro img {
-        filter: grayscale(100%);
-        margin-left: auto;
-        margin-right: auto;
-        opacity: 0.6;
-        order: 2;
-        width: 37px;
-        width: 2.3rem;
+        width: 3.5rem;
     }
 }
 
@@ -911,17 +928,114 @@ main .work {
     .work div {
         padding-top: 5rem;
     }
+    .home div {
+        padding-left: 2rem;
+        top: 2rem;
+        text-align: left;
+        transform: none;
+    }
+    .home blockquote {
+        border: none;
+        font-size: 2rem;
+        line-height: 3rem;
+        margin: 0;
+        max-width: 39rem;
+        padding: 0;
+        position: relative;
+        text-align: left;
+    }
+    .home h1 {
+        display: inline;
+        font-size: 4.5rem;
+        padding-left: 2rem;
+    }
+    .home h2 {
+        color: #4a4a4a;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    .home h2::before {
+        background-color: white;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 15rem;
+        z-index: -1;
+    }
+    .home blockquote::before {
+        bottom: 0;
+        background-color: white;
+        content: '';
+        height: auto;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 33rem;
+        z-index: -1;
+    }
+    .home header ul {
+        float: right;
+    }
+    .home header a {
+        font-size: 3rem;
+    }
+    .home .intro::before {
+        opacity: 0.2;
+    }
+    .home .intro img {
+        display: inline;
+        width: 2.5rem;
+    }
+    .home .topnav li {
+        display: block;
+        text-align: right;
+        width: auto;
+    }
     body:not([class="home"]) .intro h1 {
         font-size: 4.5rem;
     }
     .detail .intro p {
         font-size: 1.3rem;
     }
+    .home #top {
+        bottom: 0;
+        padding-right: 2rem;
+        top: auto;
+    }
 }
 
 @media screen and (min-width: 71rem){
     .work-container {
         padding: 2rem 0;
+    }
+    .home div {
+        padding-left: 4rem;
+    }
+    .home h1 {
+        font-size: 6.5rem;
+    }
+    .home h2 {
+        font-size: 1.7rem;
+    }
+    .home h2::before {
+        width: 16rem;
+    }
+    .home blockquote {
+        font-size: 3rem;
+        line-height: 4rem;
+        max-width: 47rem;
+    }
+    .home blockquote::before {
+        width: 48rem;
+    }
+    .home header a {
+        font-size: 4rem;
+    }
+    .home .intro img {
+        width: 3.5rem;
     }
     @supports(display:grid){
         .work-container {
@@ -976,13 +1090,9 @@ main .work {
         .work-container section:nth-of-type(1) div, .work-container section:nth-of-type(2) div {
             padding-top: 8rem;
         }
-    }
-    .home blockquote {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 5rem;
-        padding-right: 5rem;
-        max-width: 80rem;
+        .home #top {
+            padding-right: 4rem;
+        }
     }
     .skills img {
         height: 6rem;
@@ -1022,18 +1132,26 @@ main .work {
     a.view {
         font-size: 1.5rem;
     }
-    .home blockquote {
-        font-size: 6rem;
-        max-width: 100rem;
-    }
     .home h1 {
-        font-size: 2.5rem;
+        font-size: 8.5rem;
     }
     .home h2 {
-        font-size: 1.1rem;
+        font-size: 2rem;
+    }
+    .home h2::before {
+        width: 18rem;
+    }
+    .home blockquote {
+        max-width: 59rem;
+    }
+    .home blockquote::before {
+        width: 50rem;
+    }
+    .home header a {
+        font-size: 5rem;
     }
     .home .intro img {
-        width: 3rem;
+        width: 5rem;
     }
     .personally p:first-of-type, .frontender p, .frontender h2, .contact div:first-of-type, .skills, .resume, .personally > h2 {
         padding-left: 0;
